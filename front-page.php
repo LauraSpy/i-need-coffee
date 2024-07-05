@@ -70,12 +70,10 @@
             <?php if (have_rows('coffee__list')) : ?>
                 <?php while (the_repeater_field('coffee__list')) : ?>
                     <div class="coffee-list">
+                        <img src="<?php the_sub_field('coffee__list_img'); ?>" alt="">
                         <a href="<?php the_field('link_post'); ?>">
-                            <img src="<?php the_sub_field('coffee__list_img'); ?>" alt="">
+                            <h3 class="coffee-list-title"><?php the_sub_field('coffee__list_title'); ?></h3>
                         </a>
-                        <div class="coffee-list-title">
-                            <?php the_sub_field('coffee__list_title'); ?>
-                        </div>
                     </div>
                 <?php endwhile; ?>
             <?php else : ?>
