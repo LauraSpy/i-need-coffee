@@ -13,17 +13,6 @@
     <?php wp_head(); ?>
 
 
-    <nav class="main-nav">
-
-        <?php
-        wp_nav_menu(array(
-            'theme_location' => 'main-menu',
-            'container' => false,
-            'menu_class' => 'nav-menu'
-        ));
-        ?>
-    </nav>
-
 </head>
 
 <body <?php body_class('body'); ?>>

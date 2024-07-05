@@ -14,3 +14,9 @@ register_nav_menus([
     'social-networks' => 'Social networks',
     'footer-legal' => 'Legal links'
 ]);
+
+function iNeedCoffee_frontPage_scripts()
+{
+    wp_enqueue_script('front-page', get_template_directory_uri() . '/front-page.js', array(), '1.0.0', true);
+}
+add_action('wp_enqueue_scripts', 'iNeedCoffee_frontPage_scripts');

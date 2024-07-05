@@ -14,6 +14,11 @@ Version: 1.0
     box-sizing: border-box;
 }
 
+
+body {
+    background-color: black;
+}
+
 header {
     background-color: brown;
     font-family: "Orbitron", sans-serif;
@@ -23,6 +28,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 header h1, header p {
@@ -50,29 +56,29 @@ header h1 {
     }
 }
 
-body {
-    background-color: black;
-}
 
 .main-nav {
-    position: relative;
-    display: inline-block;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    z-index: 5;
 }
 
-.main-nav button {
-    width: 100px;
-    height: 100px;
+.menu-toggle {
     color: white;
+    width: 30px; /* Ajustez la taille selon vos besoins */
+    height: 30px; /* Ajustez la taille selon vos besoins */
+    cursor: pointer;
 }
 
 .nav-menu {
     display: none;
     position: absolute;
     right: 5%;
-    padding: 1% 3%;
     border-radius: 5px;
     background-color: black;
     font-family: "Chakra Petch", sans-serif;
+    font-size: 0.5em;
 }
 
 .nav-menu a {
@@ -83,6 +89,7 @@ body {
 .nav-menu ul {
     list-style-type: none;
 }
+
 
 .bg_menu_galery {
     background-image: linear-gradient(to bottom, #151429, #27204b, #412a6d, #62318e, #8934ad);
@@ -614,22 +621,45 @@ body {
 
 /* page du SINGLE.PHP pour "Books" */
 
+.book_body {
+    background-image: linear-gradient(to bottom, #151429, #24264a, #31396e, #3c4e95, #4364be, #5460b7, #625bb0, #6c57a9, #633c73, #4b2645, #2b1721, #000000);
+}
+
 .book_header {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    margin: 5% 10%;
+    flex-wrap: wrap;
+    padding: 5% 10%;
 }
 
 .book_header img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     transform: scale(90%);
-    position: absolute;
-    z-index: 5;
-    left: 15%;
-    top: 20%;
 }
+
+.book_synopsis_title {
+    color: white;
+    font-size: 1.8em;
+    margin-left: 30%;
+    font-family: "Chakra Petch", sans-serif;
+    animation: text-focus-in 1s linear 0s 1 normal none;*/
+}
+
+@keyframes text-focus-in {
+        
+    0% {
+        filter:blur(12px);
+        opacity:0;
+    }
+    100% {
+        filter:blur(0);
+        opacity:1;
+    }
+}
+
 
 .book_synopsis {
     position: relative;
