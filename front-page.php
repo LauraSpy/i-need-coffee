@@ -67,7 +67,7 @@
             <?php if (have_rows('coffee__list')) : ?>
                 <?php while (the_repeater_field('coffee__list')) : ?>
                     <div class="coffee-list">
-                        <a href="">
+                        <a href="<?php the_field('link_post'); ?>">
                             <img src="<?php the_sub_field('coffee__list_img'); ?>" alt="">
                         </a>
                         <div class="coffee-list-title">
