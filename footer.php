@@ -2,9 +2,11 @@
 
 <footer>
     <section id="date">
-        <?php echo get_the_date(); ?>
+        <p>Date of creation : <?php echo get_the_date(); ?></p>
     </section>
-    <p>footer</p>
+    <section id="auteur">
+        <h2>© created by Laura Spy</h2>
+    </section>
 </footer>
 
 <script>
