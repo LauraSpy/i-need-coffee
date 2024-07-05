@@ -25,7 +25,10 @@
             <div class="cafe_bg">
                 <div class="cafe_bg_img"><img src="<?php the_field('cafe__menu_image') ?>" alt=""></div>
             </div>
-            <h2><?php the_field('cafe__menu_title') ?></h2>
+            <div class="cafe_menu">
+                <h2><?php the_field('cafe__menu_title') ?></h2>
+                <a href="<?php the_field('browser_books') ?>">See all the books</a>
+            </div>
         </div>
     </section>
     <section class="book_container_bg">

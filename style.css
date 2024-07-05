@@ -374,6 +374,24 @@ header h1 {
     }
 }
 
+.cafe_menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cafe_menu a {
+    text-decoration: none;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    transition: all ease-in-out 0.5s;
+}
+
+.cafe_menu a:hover {
+    transition: ease-in-out 0.5s;
+    text-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
 .cafe_bg_img {
     align-self: flex-end;
 }
