@@ -2,15 +2,12 @@
 
 
 <?php
-wp_nav_menu(
-  array(
-    'theme_location' => 'main-navigation',
-    'container' => 'nav',
-    'container_class' => 'nav',
-    'menu_class' => 'nav'
-  )
-);
-?>    
+wp_nav_menu(array(
+  'theme_location' => 'main-menu',
+  'container' => false,
+  'menu_class' => 'nav-menu'
+));
+?> 
 
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post(); ?>
