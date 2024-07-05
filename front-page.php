@@ -49,7 +49,7 @@
     </section>
     <section class="coffee_bg">
         <div id="coffee">
-            <img src="<?php the_field('coffee_bgimg'); ?>" alt="">
+            <img src="<?php the_field('coffee_bgimg'); ?>" alt="cyber café coffee image">
             <h3 class="coffee_title"><?php the_field('coffee_title'); ?></h3>
         </div>
     </section>
