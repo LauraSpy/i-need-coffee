@@ -41,3 +41,17 @@ function enqueue_list_of_books_style()
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_list_of_books_style');
+
+
+
+//FOOTER
+
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title'    => 'Theme General Settings',
+        'menu_title'    => 'Theme Settings',
+        'menu_slug'     => 'theme-general-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+}
