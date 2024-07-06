@@ -72,14 +72,14 @@
                     <div class="coffee-list">
                         <img src="<?php echo esc_url(get_sub_field('coffee__list_img')); ?>" alt="">
                         <h3 class="coffee-list-title">
-                            <a href="<?php echo esc_url(get_field('link_post')); ?>">
+                            <a href="<?php echo esc_url(get_sub_field('link_post')); ?>">
                                 <?php echo wp_kses_post(get_sub_field('coffee__list_title')); ?>
                             </a>
                         </h3>
                     </div>
                 <?php endwhile; ?>
             <?php else : ?>
-                <!-- Vous pouvez ajouter un message ici si aucun élément n'est trouvé -->
+                <p>Aucun élément trouvé.</p>
             <?php endif; ?>
         </div>
 

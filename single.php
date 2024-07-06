@@ -30,22 +30,32 @@
     </div>
 
     <section id="book_extrait">
-        <?php if (have_rows('book_chapter')) : ?>
-            <?php while (have_rows('book_chapter')) : the_row(); ?>
-                <div class="book_box" style="background: center / cover no-repeat url('<?php echo esc_url(get_sub_field('book__chapter_bgimg')); ?>');">
-                    <span class="book_chapter_number"><?php echo esc_html(get_sub_field('book__chapter_number')); ?></span>
-                    <div class="book_chapter_title">
-                        <?php echo wp_kses_post(get_sub_field('book__chapter_title')); ?>
+        <div class="book_container">
+            <?php
+            if (have_rows('book_chapter')) :
+                $chapter_count = 0;
+                while (have_rows('book_chapter')) : the_row();
+                    $chapter_count++;
+            ?>
+                    <div class="book_box" data-chapter="<?php echo $chapter_count; ?>" style="background: center / cover no-repeat url('<?php echo esc_url(get_sub_field('book__chapter_bgimg')); ?>');">
+                        <div class="book_content">
+                            <span class="book_chapter_number"><?php echo esc_html(get_sub_field('book__chapter_number')); ?></span>
+                            <div class="book_chapter_title">
+                                <?php echo wp_kses_post(get_sub_field('book__chapter_title')); ?>
+                            </div>
+                            <span class="book_chapter_date"><?php echo esc_html(get_sub_field('book__chapter_date')); ?></span>
+                            <div class="book_chapter_text">
+                                <?php echo wp_kses_post(get_sub_field('book__chapter_text')); ?>
+                            </div>
+                        </div>
                     </div>
-                    <span class="book_chapter_date"><?php echo esc_html(get_sub_field('book__chapter_date')); ?></span>
-                    <div class="book_chapter_text">
-                        <?php echo wp_kses_post(get_sub_field('book__chapter_text')); ?>
-                    </div>
-                </div>
-            <?php endwhile; ?>
-        <?php else : ?>
-            <!-- Vous pouvez ajouter un message ici si aucun chapitre n'est trouvé -->
-        <?php endif; ?>
+            <?php
+                endwhile;
+            endif;
+            ?>
+        </div>
+        <button id="prevChapter" class="chapter-nav">Previous</button>
+        <button id="nextChapter" class="chapter-nav">Next</button>
     </section>
 </div>
 

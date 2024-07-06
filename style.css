@@ -962,7 +962,7 @@ header h1 {
     font-size: 1.8em;
     margin-left: 30%;
     font-family: "Chakra Petch", sans-serif;
-    animation: text-focus-in 1s linear 0s 1 normal none;*/
+    animation: text-focus-in 1s linear 0s 1 normal none;
 }
 
 @keyframes text-focus-in {
@@ -992,22 +992,49 @@ header h1 {
 }
 
 #book_extrait {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 5%;
+    position: relative;
+    margin-top: 3%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#book_extrait button {
+    font-family: "Chakra Petch", sans-serif;
+    border-radius: 5px;
+}
+
+.book_container {
+    width: 100%;
+    height: 100%;
 }
 
 .book_box {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2% 5%;
+    width: 100vw;
     height: 100vh;
-    gap: 2vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
+.book_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 5%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajout d'un fond semi-transparent pour améliorer la lisibilité */
+}
+
+/* Le reste de votre CSS reste inchangé */
 
 .book_chapter_number {
     padding: 1%;
@@ -1021,6 +1048,7 @@ header h1 {
 
 .book_chapter_date {
     margin-top: 2%;
+    margin-bottom: 3%;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 5px;
     border-radius: 5px;
@@ -1173,8 +1201,32 @@ header h1 {
     scrollbar-width: none;
     line-height: 150%;
     font-size: 1.1em;
+    border-radius: 10px;
 }
 
+.book_chapter_text::-webkit-scrollbar {
+    display: none;
+}
+
+.chapter-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#prevChapter {
+    left: 20px;
+}
+
+#nextChapter {
+    right: 20px;
+}
 
 /* Page of the list of books */
 
