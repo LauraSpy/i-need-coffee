@@ -71,9 +71,7 @@
                 <?php while (the_repeater_field('coffee__list')) : ?>
                     <div class="coffee-list">
                         <img src="<?php the_sub_field('coffee__list_img'); ?>" alt="">
-                        <a href="<?php the_field('link_post'); ?>">
-                            <h3 class="coffee-list-title"><?php the_sub_field('coffee__list_title'); ?></h3>
-                        </a>
+                        <h3 class="coffee-list-title"><a href="<?php the_field('link_post'); ?>"><?php the_sub_field('coffee__list_title'); ?></a></h3>
                     </div>
                 <?php endwhile; ?>
             <?php else : ?>
