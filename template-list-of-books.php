@@ -29,8 +29,8 @@ Template Name: List of Books
 
     <section class="book_container_bg">
         <div class="book_title_list">
-            <h2><?php the_field('list__list_title'); ?></h2>
-            <p><?php the_field('list__list_subtitle'); ?></p>
+            <h2><?php echo wp_kses_post(get_field('list__list_title')); ?></h2>
+            <p><?php echo wp_kses_post(get_field('list__list_subtitle')); ?></p>
         </div>
         <div class="book_container">
             <?php
@@ -45,10 +45,10 @@ Template Name: List of Books
 
             <?php if ($the_query->have_posts()) : ?>
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <a href="<?php the_permalink(); ?>" class="post_box">
-                        <img src="<?php the_field('book__image_id'); ?>" alt="img cyber cat book">
-                        <h3><?php the_title(); ?></h3>
-                        <p><?php the_field('book_synopsis'); ?></p>
+                    <a href="<?php echo esc_url(get_permalink()); ?>" class="post_box">
+                        <img src="<?php echo esc_url(get_field('book__image_id')); ?>" alt="img cyber cat book">
+                        <h3><?php echo wp_kses_post(get_the_title()); ?></h3>
+                        <p><?php echo wp_kses_post(get_field('book_synopsis')); ?></p>
                     </a>
 
                 <?php endwhile; ?>
@@ -59,7 +59,7 @@ Template Name: List of Books
 
         </div>
         <div class="list_info">
-            <p>All the story were generate by IA - Perplexity.ia - after One prompt originaly made by me : the CyberCatrix</p>
+            <p><?php echo esc_html('All the story were generate by IA - Perplexity.ia - after One prompt originaly made by me : the CyberCatrix'); ?></p>
         </div>
     </section>
 
