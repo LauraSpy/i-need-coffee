@@ -59,11 +59,13 @@
             <?php wp_reset_postdata(); ?>
 
         </div>
+        <h2 class="gap_placement"><?php echo wp_kses_post(get_field('title_for_gap')) ?></h2>
     </section>
     <section class="coffee_bg">
         <div id="coffee">
             <img src="<?php echo esc_url(get_field('coffee_bgimg')); ?>" alt="cyber café coffee image">
             <h3 class="coffee_title"><?php echo wp_kses_post(get_field('coffee_title')); ?></h3>
+            <p class="coffee_subtitle"><?php echo wp_kses_post(get_field('coffee_subtitle')); ?></p>
         </div>
 
         <div class="coffee_items">
@@ -76,6 +78,11 @@
                                 <?php echo wp_kses_post(get_sub_field('coffee__list_title')); ?>
                             </a>
                         </h3>
+                        <h2 class="recipe_button">
+                            <a href="<?php echo wp_kses_post(get_field('coffee__list_recipe')) ?>">
+                                <?php echo wp_kses_post(get_field('coffee__list_button')); ?>
+                            </a>
+                        </h2>
                     </div>
                 <?php endwhile; ?>
             <?php else : ?>

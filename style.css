@@ -235,12 +235,18 @@ header h1 {
 }
 
 .cafe_bg {
-    width: 15vw;
-    height: 15vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    clip-path:ellipse(50% 50%);
+    transform: scale(0.9);
+}
+
+.cafe_bg img {
+    width: 15vmax;
+    height: 15vmax;
+    object-fit: cover;
+    object-position: bottom center;
+    border: 4px inset #0002d8;
 }
 
 #cafe_menu_galery h2 {
@@ -390,10 +396,6 @@ header h1 {
 .cafe_menu a:hover {
     transition: ease-in-out 0.5s;
     text-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
-}
-
-.cafe_bg_img {
-    align-self: flex-end;
 }
 
 .book_title {
@@ -624,7 +626,16 @@ header h1 {
     width: 10vmax;
     height: 10vmax;
     border-radius: 5px;
-    padding-top: 10%;
+    margin-top: 10%;
+}
+
+.gap_placement {
+    font-family: "Orbitron", sans-serif;
+    font-size: 3vmax;
+    color: hsla(291, 84%, 76%, 1);
+    text-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    text-align: center;
+    padding: 0 10% 10% 10%;
 }
 
 .coffee_bg {
@@ -770,6 +781,38 @@ header h1 {
     100% {
         opacity:0;
     }
+}
+
+.coffee_subtitle  {
+    font-size: 1.3vmax;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    text-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+.recipe_button {
+	box-shadow:inset 0px 1px 8px -5px #dcecfb;
+	background:linear-gradient(to bottom, #ff5eff 5%, #4343f0 100%);
+	background-color:#ff5eff;
+	border-radius:5px;
+	border:1px solid #d785f2;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 40px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5494cc;
+}
+.recipe_button:hover {
+	background:linear-gradient(to bottom, #4343f0 5%, #ff5eff 100%);
+	background-color:#4343f0;
+}
+.recipe_button:active {
+	position:relative;
+	top:1px;
 }
 
 

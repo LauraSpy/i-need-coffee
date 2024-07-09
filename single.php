@@ -20,7 +20,6 @@
         <img src="<?php echo esc_url(get_field('book__image_id')); ?>" alt="img cat cyber for first book">
         <h1 class="book_title">
             <?php echo wp_kses_post(get_the_title()); ?>
-            <?php echo wp_kses_post(get_field('book__id')); ?>
         </h1>
     </div>
 
