@@ -72,17 +72,10 @@
             <?php if (have_rows('coffee__list')) : ?>
                 <?php while (have_rows('coffee__list')) : the_row(); ?>
                     <div class="coffee-list">
-                        <img src="<?php echo esc_url(get_sub_field('coffee__list_img')); ?>" alt="">
-                        <h3 class="coffee-list-title">
-                            <a href="<?php echo esc_url(get_sub_field('link_post')); ?>">
-                                <?php echo wp_kses_post(get_sub_field('coffee__list_title')); ?>
-                            </a>
-                        </h3>
-                        <h2 class="recipe_button">
-                            <a href="<?php echo wp_kses_post(get_field('coffee__list_recipe')) ?>">
-                                <?php echo wp_kses_post(get_field('coffee__list_button')); ?>
-                            </a>
-                        </h2>
+                        <a href="<?php echo esc_url(get_sub_field('link_post')); ?>" target="_blank">
+                            <img src="<?php echo esc_url(get_sub_field('coffee__list_img')); ?>" alt="">
+                            <h3 class="coffee-list-title"><?php echo wp_kses_post(get_sub_field('coffee__list_title')); ?></h3>
+                        </a>
                     </div>
                 <?php endwhile; ?>
             <?php else : ?>

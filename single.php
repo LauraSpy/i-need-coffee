@@ -17,10 +17,20 @@
 
 <div class="book_body">
     <div class="book_header">
-        <img src="<?php echo esc_url(get_field('book__image_id')); ?>" alt="img cat cyber for first book">
-        <h1 class="book_title">
-            <?php echo wp_kses_post(get_the_title()); ?>
-        </h1>
+        <div class="book_header_title">
+            <img src="<?php echo esc_url(get_field('book__image_id')); ?>" alt="img cat cyber for first book">
+            <h1 class="book_title">
+                <?php echo wp_kses_post(get_the_title()); ?>
+            </h1>
+        </div>
+        <div class="box_recipe_button">
+            <img src="<?php echo esc_url(get_field('coffee__choose_img')); ?>">
+            <a href="<?php echo esc_url(get_field('coffee__choose_recipe')); ?>" target="_blank">
+                <h2 class="recipe_button">
+                    Find your Cat'fé recipe <br> to drink while reading
+                </h2>
+            </a>
+        </div>
     </div>
 
     <h3 class="book_synopsis_title">Synopsis of the book</h3>

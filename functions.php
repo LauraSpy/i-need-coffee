@@ -11,7 +11,7 @@ add_theme_support('menus');
 // Define menus locations
 register_nav_menus([
     'main-navigation' => 'Main navigation',
-    'social-networks' => 'Social networks',
+    'social-networks' => 'Réseaux Sociaux',
     'footer-legal' => 'Legal links'
 ]);
 
@@ -36,7 +36,7 @@ add_action('wp_enqueue_scripts', 'iNeedCoffee_single_scripts');
 
 function enqueue_list_of_books_style()
 {
-    if (is_page_template('template-list-of-books.php')) {
+    if (is_page_template('archive-book.php')) {
         wp_enqueue_style('list-of-books-style', get_template_directory_uri() . '/style.css');
     }
 }

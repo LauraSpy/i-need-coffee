@@ -7,7 +7,7 @@ Template Name: List of Books
 <?php get_header() ?>
 
 
-<header style="background: center / cover no-repeat url('<?php the_field('list__page_img'); ?>'); height: 600px;">
+<header style="background: center / cover no-repeat url('<?php echo esc_url(get_field('list__page_img')); ?>'); height: 600px;">
     <nav class="main-nav">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list menu-toggle" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
@@ -21,7 +21,7 @@ Template Name: List of Books
         ?>
     </nav>
 
-    <h1><?php the_field('list__page_title'); ?></h1>
+    <h1><?php echo wp_kses_post(get_field('list__page_title')); ?></h1>
 
 </header>
 
