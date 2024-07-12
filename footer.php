@@ -1,6 +1,9 @@
 <?php wp_footer(); ?>
 
 <footer id="site-footer">
+    <button id="back-to-top" title="Retour en haut" style="display: none;">
+        Back to top
+    </button>
 
     <div class="container">
         <section class="social_networks_container">
@@ -27,13 +30,14 @@
     </div>
 
     <div id="date">
-        <p>Date of creation : <br> <?php echo esc_html(get_the_date()); ?></p>
+        <h3>Date of creation : </h3>
+        <p><?php echo esc_html(get_the_date()); ?></p>
     </div>
 
     <div id="mentions_légales">
         <h3>Legal Notices</h3>
-        <p>Button Play/Payse : Graphix's Art</p>
-        <p>Music : Phantasm by Purely Grey | https://soundcloud.com/purelygrey</p>
+        <p><strong>Button Play/Pause :</strong> Graphix's Art</p>
+        <p><strong>Music :</strong> Phantasm by Purely Grey | https://soundcloud.com/purelygrey</p>
         <p></p>
     </div>
 

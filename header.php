@@ -47,7 +47,6 @@
             <button id="toggle-music">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/play-button.png" alt="Play" class="play-icon" width="24" height="24">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/pause-button.png" alt="Pause" class="pause-icon" width="24" height="24" style="display: none;">
-                <!-- <span class="sr-only">Play/Pause Music</span> -->
             </button>
     <?php
         endif;

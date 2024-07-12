@@ -54,3 +54,11 @@ function enqueue_background_music_script()
     wp_enqueue_script('background-music', get_template_directory_uri() . '/background-music.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_background_music_script');
+
+
+//back-to-top button
+function enqueue_back_to_top_script()
+{
+    wp_enqueue_script('back-to-top', get_template_directory_uri() . '/back-to-top.js', array(), '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_back_to_top_script');
