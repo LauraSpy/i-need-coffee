@@ -25,6 +25,35 @@
         ?>
     </nav>
 
+    <div style="display: none;">
+        <?php
+        echo file_get_contents(get_template_directory() . '/images/play-button.png');
+        echo file_get_contents(get_template_directory() . '/images/pause-button.png');
+        ?>
+    </div>
+
+    <?php
+    if (function_exists('get_field')) {
+        $music_enabled = get_field('enable_background_music', 'option');
+        $music_file = get_field('background_music_file', 'option');
+
+        if ($music_enabled && $music_file) :
+            $music_url = is_array($music_file) ? $music_file['url'] : $music_file;
+    ?>
+            <audio id="background-music" loop>
+                <source src="<?php echo esc_url($music_url); ?>" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button id="toggle-music">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/play-button.png" alt="Play" class="play-icon" width="24" height="24">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/pause-button.png" alt="Pause" class="pause-icon" width="24" height="24" style="display: none;">
+                <!-- <span class="sr-only">Play/Pause Music</span> -->
+            </button>
+    <?php
+        endif;
+    }
+    ?>
+
 </head>
 
 <body <?php body_class('body'); ?>>

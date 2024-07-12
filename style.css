@@ -20,8 +20,60 @@ Version: 1.0
     padding-top: 0.3%;
     position: absolute;
     z-index: 5;
-    border: 1px solid white;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.main-nav:hover {
+    animation: shakeMe 1s ease 0s 1 normal forwards;
+}
+
+@keyframes shakeMe {
+	0% {
+		transform: translate(0);
+	}
+
+	10% {
+		transform: translate(-2px, -2px);
+	}
+
+	20% {
+		transform: translate(2px, -2px);
+	}
+
+	30% {
+		transform: translate(-2px, 2px);
+	}
+
+	40% {
+		transform: translate(2px, 2px);
+	}
+
+	50% {
+		transform: translate(-2px, -2px);
+	}
+
+	60% {
+		transform: translate(2px, -2px);
+	}
+
+	70% {
+		transform: translate(-2px, 2px);
+	}
+
+	80% {
+		transform: translate(-2px, -2px);
+	}
+
+	90% {
+		transform: translate(2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
 }
 
 .menu-toggle {
@@ -181,6 +233,41 @@ Version: 1.0
     }
 }
 
+#toggle-music {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    z-index: 5;
+    cursor: pointer;
+}
+
+#toggle-music:hover {
+    animation: pulse 0.6s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+button#toggle-music  {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+#toggle-music img {
+    width: 40px;
+    height: 40px;
+}
 
 body {
     background-color: black;
@@ -249,6 +336,21 @@ header h1 {
     object-fit: cover;
     object-position: bottom center;
     border: 4px inset #0002d8;
+    animation: pulseReg 1.5s ease-in-out 0s infinite normal none;
+}
+
+@keyframes pulseReg {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
 
 #cafe_menu_galery h2 {
@@ -256,6 +358,9 @@ header h1 {
     font-family: "Orbitron", sans-serif;
     color: hsla(291, 84%, 76%, 1);
     text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
+
+#cafe_menu_galery h2:hover {
     animation: text-flicker-out-glow 1s linear 0s 1 normal none;
 }
 
@@ -558,46 +663,38 @@ header h1 {
     padding: 2%;
     margin-bottom: 5%;
     border-radius: 5%;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(209, 213, 219, 0.8) 0px 0px 0px 1px inset;
     background-image: linear-gradient(to right bottom, #0002d8, #7900cf, #aa00c5, #ce00bc, #eb12b4);
 }
 
 .post_box:hover {
-    animation: bounce-top 0.8s linear 0s 1 normal none;
+    animation: vibrate2 0.5s ease 0s 1 normal none;
 }
 
-@keyframes bounce-top {
-        
-    0% {
-        transform:translateY(0);
-    }
-    25% {
-        transform:translateY(0);
-    }
-    40% {
-        transform:translateY(-24px);
-    }
-    55% {
-        transform:translateY(0);
-    }
-    65% {
-        transform:translateY(-12px);
-    }
-    75% {
-        transform:translateY(0);
-    }
-    82% {
-        transform:translateY(-6px);
-    }
-    87% {
-        transform:translateY(0);
-    }
-    93% {
-        transform:translateY(-4px);
-    }
-    100% {
-        transform:translateY(0);
-    }
+@keyframes vibrate2 {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: translate(2px, -2px);
+	}
+
+	40% {
+		transform: translate(2px, 2px);
+	}
+
+	60% {
+		transform: translate(-2px, 2px);
+	}
+
+	80% {
+		transform: translate(-2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
 }
 
 
@@ -638,6 +735,20 @@ header h1 {
     text-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
     text-align: center;
     padding: 0 10% 10% 10%;
+    animation: blink1 1.5s ease-in-out 0s infinite normal none;
+}
+
+@keyframes blink1 {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
 }
 
 .coffee_bg {
@@ -653,12 +764,31 @@ header h1 {
     text-decoration: none;
 }
 
+#coffee img {
+    width: 60vw;
+    height: auto;
+    border-radius: 5px;
+    border: 5px solid black;
+    filter: brightness(5%);
+    transition: all ease-in-out 1.5s;
+}
+
+
+#coffee img:hover {
+    transition: ease-in-out 0.5s;
+    filter: brightness(150%);
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
 .coffee_title {
     margin-top: 2vw;
     font-size: 3vmax;
     font-family: "Orbitron", sans-serif;
     color: hsla(291, 84%, 76%, 1);
     text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
+
+.coffee_title:hover {
     animation: text-flicker-out-glow 1s linear 0s 1 normal none;
 }
 
@@ -791,41 +921,6 @@ header h1 {
     font-family: "Orbitron", sans-serif;
     text-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
 }
-
-.recipe_button {
-	box-shadow:inset 0px 1px 8px -5px #dcecfb;
-	background:linear-gradient(to bottom, #ff5eff 5%, #4343f0 100%);
-	background-color:#ff5eff;
-	border-radius:5px;
-	border:1px solid #d785f2;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 40px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #5494cc;
-}
-.recipe_button:hover {
-	background:linear-gradient(to bottom, #4343f0 5%, #ff5eff 100%);
-	background-color:#4343f0;
-}
-.recipe_button:active {
-	position:relative;
-	top:1px;
-}
-
-#coffee img {
-    width: 60vw;
-    height: auto;
-    border-radius: 5px;
-    border: 5px solid black;
-    filter: brightness(150%);
-    box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
 
 .coffee_items {
     display: flex;
@@ -1069,6 +1164,7 @@ header h1 {
 .recipe_button {
     text-align: center;
 	box-shadow:inset 0px 1px 8px -5px #dcecfb;
+    filter: opacity(80%);
 	background:linear-gradient(to bottom, #ff5eff 5%, #4343f0 100%);
 	background-color:#ff5eff;
 	border-radius:5px;
@@ -1076,17 +1172,19 @@ header h1 {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
+	font-family: "Orbitron", sans-serif;
+	font-size: 12px;
 	padding:6px 40px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #5494cc;
+    transition: all ease-in-out 0.6s;
 }
 
 .recipe_button:hover {
+    transition: ease-in-out 0.3s;
 	background:linear-gradient(to bottom, #4343f0 5%, #ff5eff 100%);
 	background-color:#4343f0;
+    filter: opacity(100%);
 }
 .recipe_button:active {
 	position:relative;
@@ -1334,6 +1432,23 @@ header h1 {
     right: 15vmax;
 }
 
+#prevChapter:hover, #nextChapter:hover {
+    animation: blink1_backwards 0.5s ease-in-out 0s 1 normal backwards;
+}
+
+@keyframes blink1_backwards {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
 /* Page of the list of books */
 
 .book_title_list {
@@ -1348,6 +1463,9 @@ header h1 {
     font-size: 5vmax;
     color: hsla(291, 84%, 76%, 1);
     text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
+
+.book_title_list h2:hover {
     animation: text-flicker-out-glow 1s linear 0s 1 normal none;
 }
 
@@ -1487,7 +1605,6 @@ header h1 {
     padding-bottom: 5%;
 }
 
-
 .coffee_subtitle  {
     font-size: 1.3vmax;
     color: white;
@@ -1555,6 +1672,16 @@ header h1 {
     color: #6f6bb69f;
 }
 
+#mentions_légales {
+    padding-top: 5vh;
+    font-size: 0.8vmax;
+    font-family: "Orbitron", sans-serif;
+    color: #6f6bb69f;
+}
+
+#mentions_légales h3 {
+    padding-bottom: 1%;
+}
 
 @media screen and (max-width: 800px) {
     header h1, header p {

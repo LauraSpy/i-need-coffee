@@ -29,8 +29,16 @@
     <div id="date">
         <p>Date of creation : <br> <?php echo esc_html(get_the_date()); ?></p>
     </div>
+
+    <div id="mentions_légales">
+        <h3>Legal Notices</h3>
+        <p>Button Play/Payse : Graphix's Art</p>
+        <p>Music : Phantasm by Purely Grey | https://soundcloud.com/purelygrey</p>
+        <p></p>
+    </div>
+
     <div id="auteur">
-        <h2>© created by <?php echo esc_html('Laura Spy'); ?></h2>
+        <h2>© Template created by <?php echo esc_html('Laura Spy'); ?></h2>
     </div>
 </footer>
 

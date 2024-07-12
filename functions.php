@@ -40,6 +40,17 @@ if (function_exists('acf_add_options_page')) {
         'menu_title'    => 'Theme Settings',
         'menu_slug'     => 'theme-general-settings',
         'capability'    => 'edit_posts',
-        'redirect'      => false
+        'redirect'      => false,
+        'parent_slug'   => 'options-general.php'
     ));
 }
+
+
+
+// pour ajouter la musique de fond du site 
+
+function enqueue_background_music_script()
+{
+    wp_enqueue_script('background-music', get_template_directory_uri() . '/background-music.js', array(), '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_background_music_script');
