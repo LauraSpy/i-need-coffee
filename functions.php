@@ -32,18 +32,6 @@ function iNeedCoffee_single_scripts()
 add_action('wp_enqueue_scripts', 'iNeedCoffee_single_scripts');
 
 
-//template for the list of books page
-
-function enqueue_list_of_books_style()
-{
-    if (is_page_template('archive-book.php')) {
-        wp_enqueue_style('list-of-books-style', get_template_directory_uri() . '/style.css');
-    }
-}
-add_action('wp_enqueue_scripts', 'enqueue_list_of_books_style');
-
-
-
 //FOOTER
 
 if (function_exists('acf_add_options_page')) {

@@ -14,53 +14,14 @@ Version: 1.0
     box-sizing: border-box;
 }
 
-
-body {
-    background-color: black;
-}
-
-header {
-    font-family: "Orbitron", sans-serif;
-    font-style: normal;
-    font-size: 3vmax;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-header h1, header p {
-    color: hsla(291, 84%, 76%, 1);
-    text-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
-}
-
-header h1 {
-    animation: text-shadow-multicolor 2s ease 0s infinite normal none;
-}
-
-@keyframes text-shadow-multicolor {
-        
-    0% {
-        text-shadow:0 0px 15px #f0f;
-    }
-    33% {
-        text-shadow:0 0px 15px #0ff;
-    }
-    66% {
-        text-shadow:0 0px 10px #0f0;
-    }
-    100% {
-        text-shadow:0 0px 10px #ff0;
-    }
-}
-
-
 .main-nav {
-    top: 20px;
-    right: 20px;
+    top: 8%;
+    right: 5%;
+    padding-top: 0.3%;
     position: absolute;
     z-index: 5;
+    border: 1px solid white;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
 .menu-toggle {
@@ -74,6 +35,7 @@ header h1 {
     display: none;
     position: absolute;
     right: 5%;
+    top: 150%;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0);
     font-family: "Chakra Petch", sans-serif;
@@ -216,6 +178,47 @@ header h1 {
     }
     100% {
         opacity:0;
+    }
+}
+
+
+body {
+    background-color: black;
+}
+
+header {
+    font-family: "Orbitron", sans-serif;
+    font-style: normal;
+    font-size: 3vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header h1, header p {
+    color: hsla(291, 84%, 76%, 1);
+    text-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+header h1 {
+    animation: text-shadow-multicolor 2s ease 0s infinite normal none;
+}
+
+@keyframes text-shadow-multicolor {
+        
+    0% {
+        text-shadow:0 0px 15px #f0f;
+    }
+    33% {
+        text-shadow:0 0px 15px #0ff;
+    }
+    66% {
+        text-shadow:0 0px 10px #0f0;
+    }
+    100% {
+        text-shadow:0 0px 10px #ff0;
     }
 }
 
@@ -1520,6 +1523,24 @@ header h1 {
 .social-icon img {
     width: 50px;
     height: 50px;
+}
+
+.social-icon:hover {
+    filter: saturate(500%);
+    animation: myAnim 0.3s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
 }
 
 #auteur h2 {
