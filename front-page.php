@@ -50,8 +50,11 @@
         <h2 class="gap_placement"><?php echo wp_kses_post(get_field('title_for_gap')) ?></h2>
     </section>
     <section class="coffee_bg">
-        <div id="coffee">
-            <img src="<?php echo esc_url(get_field('coffee_bgimg')); ?>" alt="cyber café coffee image">
+        <div class="coffee">
+            <div class="coffee-container">
+                <img src="<?php echo esc_url(get_field('coffee_bgimg')); ?>" alt="cyber café coffee image">
+                <div class="coffee-image-text"><?php echo wp_kses_post(get_field('image_placeholder_text')); ?></div>
+            </div>
             <h3 class="coffee_title"><?php echo wp_kses_post(get_field('coffee_title')); ?></h3>
             <p class="coffee_subtitle"><?php echo wp_kses_post(get_field('coffee_subtitle')); ?></p>
         </div>

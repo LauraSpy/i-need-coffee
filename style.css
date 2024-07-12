@@ -20,6 +20,7 @@ Version: 1.0
     padding-top: 0.3%;
     position: absolute;
     z-index: 5;
+    background-color: rgba(0, 0, 0, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 5px;
@@ -759,15 +760,30 @@ header h1 {
     background-image: linear-gradient(to bottom, #151429, #24264a, #31396e, #3c4e95, #4364be, #4364be, #4364be, #4364be, #3c4e95, #31396e, #24264a, #151429);
 }
 
-#coffee {
+.coffee {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    position: relative;
 }
 
-#coffee img {
+.coffee-image-text {
+    position: absolute;
+    margin-top: -17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    font-family: "Orbitron", sans-serif;
+    text-transform: uppercase;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.coffee-container img {
     width: 60vw;
     height: auto;
     border-radius: 5px;
@@ -776,11 +792,14 @@ header h1 {
     transition: all ease-in-out 1.5s;
 }
 
-
-#coffee img:hover {
+.coffee-container img:hover {
     transition: ease-in-out 0.5s;
     filter: brightness(150%);
     box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.coffee-container img:hover + .coffee-image-text {
+    opacity: 0;
 }
 
 .coffee_title {
