@@ -495,6 +495,7 @@ header h1 {
 
 .cafe_menu a {
     text-decoration: none;
+    font-size: 1em;
     color: white;
     font-family: "Orbitron", sans-serif;
     transition: all ease-in-out 0.5s;
@@ -711,10 +712,11 @@ header h1 {
 
 .post_box p {
     max-width: 20vmax;
-    font-size: 1.4vmax;
+    font-size: 14px;
     text-align: justify;
     padding-top: 5%;
     overflow-y: scroll;
+    font-family: "Chakra Petch", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -917,7 +919,7 @@ header h1 {
 }
 
 .coffee_subtitle  {
-    font-size: 1.3vmax;
+    font-size: 1em;
     color: white;
     font-family: "Orbitron", sans-serif;
     text-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
@@ -1138,8 +1140,8 @@ header h1 {
     left: 25%;
     padding: 3%;
     width: 50vw;
-    font-family: "Orbitron", sans-serif;
-    font-size: 1.3vmax;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 15px;
     color: white;
     text-align: justify;
     border-radius: 10px;
@@ -1180,28 +1182,15 @@ header h1 {
 .recipe_button:hover {
     transition: ease-in-out 0.3s;
 	background:linear-gradient(to bottom, #ff5eff 5%, #4343f0 100%);
-    text-shadow:0px 1px 0px #5494cc;
     filter: opacity(100%);
-    animation: blink1_quick 0.3s ease-in-out 0s 1 normal forwards;
-}
-
-@keyframes blink1_quick {
-	0%,
-	50%,
-	100% {
-		opacity: 1;
-	}
-
-	25%,
-	75% {
-		opacity: 0;
-	}
+    color: rgba(0, 0, 0, 1);
 }
 
 .recipe_button:active {
 	position:relative;
 	top:1px;
     box-shadow:inset 0px 1px 8px -5px #dcecfb;
+    color: rgba(0, 0, 0, 1);
 }
 
 .recipe_button a {
@@ -1268,7 +1257,7 @@ header h1 {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 5px;
     border-radius: 5px;
-    font-family: "Orbitron", sans-serif;
+    font-family: "Chakra Petch", sans-serif;
     color: white;
     font-size: 1.5vmax;
 }
@@ -1419,6 +1408,7 @@ header h1 {
     line-height: 150%;
     font-size: 1.1em;
     border-radius: 10px;
+    font-family: "Chakra Petch", sans-serif;
 }
 
 .book_chapter_text::-webkit-scrollbar {
@@ -1886,6 +1876,16 @@ header h1 {
     }
 
     
+}
+
+@media screen and (max-width: 400px) {
+    .coffee_items {
+        flex-direction: column;
+    }
+
+    .coffee-list img {
+        margin-bottom: 1%;
+    }
 }
 
 @media screen and (max-width: 250px) { 

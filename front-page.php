@@ -15,7 +15,7 @@
             </div>
             <div class="cafe_menu">
                 <h2><?php echo wp_kses_post(get_field('cafe__menu_title')); ?></h2>
-                <a href="<?php echo esc_url(get_field('browser_books')); ?>">See all the books</a>
+                <a href="<?php echo esc_url(get_field('archive_book')); ?>">or discover them all here</a>
             </div>
         </div>
     </section>
@@ -34,7 +34,7 @@
 
             <?php if ($the_query->have_posts()) : ?>
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <a href="<?php echo esc_url(get_permalink()); ?>" class="post_box">
+                    <a href="<?php echo esc_url(get_permalink()); ?>" class="post_box" target="_blank">
                         <img src="<?php echo esc_url(get_field('book__image_id')); ?>" alt="img cyber cat book">
                         <h3><?php echo wp_kses_post(get_the_title()); ?></h3>
                         <p><?php echo wp_kses_post(get_field('book_synopsis')); ?></p>
