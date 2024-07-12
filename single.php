@@ -10,11 +10,14 @@
         </div>
         <div class="box_recipe_button">
             <img src="<?php echo esc_url(get_field('coffee__choose_img')); ?>">
-            <a href="<?php echo esc_url(get_field('coffee__choose_recipe')); ?>" target="_blank">
-                <h2 class="recipe_button">
-                    Find your Cat'fé recipe <br> to drink while reading
-                </h2>
-            </a>
+            <div class="recipe_button">
+                <a href="<?php echo esc_url(get_field('coffee__choose_recipe')); ?>" target="_blank">
+                    <span></span>
+                    <h2>
+                        Find your Cat'fé recipe <br> to drink while reading
+                    </h2>
+                </a>
+            </div>
         </div>
     </div>
 
