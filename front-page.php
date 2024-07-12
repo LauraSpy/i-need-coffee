@@ -15,7 +15,7 @@
             </div>
             <div class="cafe_menu">
                 <h2><?php echo wp_kses_post(get_field('cafe__menu_title')); ?></h2>
-                <a href="<?php echo esc_url(get_field('archive_book')); ?>">or discover them all here</a>
+                <a href="<?php echo esc_url(home_url('/book/')); ?>">or discover them all here</a>
             </div>
         </div>
     </section>
