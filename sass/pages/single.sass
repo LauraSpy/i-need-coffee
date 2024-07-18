@@ -107,75 +107,76 @@
         width: 100%
         height: 100%
 
-    &__container_box
-        width: 100vw
-        height: 100vh
-        display: none
-        justify-content: center
-        align-items: center
-        background-size: cover
-        background-position: center
-        background-repeat: no-repeat
-        position: absolute
-        top: 0
-        left: 0
+        &_box
+            width: 100vw
+            height: 100vh
+            display: none
+            justify-content: center
+            align-items: center
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            position: absolute
+            top: 0
+            left: 0
 
-    &__container_box_content
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        padding: 2% 5%
-        box-sizing: border-box
-        width: 100%
-        height: 100%
-        background-color: rgba(0, 0, 0, 0.5)
+            &_content
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                padding: 2% 5%
+                box-sizing: border-box
+                width: 100%
+                height: 100%
+                background-color: rgba(0, 0, 0, 0.5)
 
-    &__container_box_content_chapter_number
-        padding: 1%
-        margin-bottom: 5%
-        font-family: $font-title
-        color: hsla(291, 84%, 76%, 1)
-        border: 1px solid hsla(291, 84%, 76%, 1)
-        background-color: rgba(0, 0, 0, 0.8)
-        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px
+                &_chapter
+                    &_number
+                        padding: 1%
+                        margin-bottom: 5%
+                        font-family: $font-title
+                        color: hsla(291, 84%, 76%, 1)
+                        border: 1px solid hsla(291, 84%, 76%, 1)
+                        background-color: rgba(0, 0, 0, 0.8)
+                        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px
 
-    &__container_box_content_chapter_date
-        margin-top: 2%
-        margin-bottom: 3%
-        background-color: rgba(0, 0, 0, 0.8)
-        padding: 5px
-        border-radius: 5px
-        font-family: $font-paragraph
-        color: white
-        font-size: 1.5vmax
+                    &_date
+                        margin-top: 2%
+                        margin-bottom: 3%
+                        background-color: rgba(0, 0, 0, 0.8)
+                        padding: 5px
+                        border-radius: 5px
+                        font-family: $font-paragraph
+                        color: white
+                        font-size: 1.5vmax
 
-    &__container_box_content_chapter_title
-        font-family: $font-title
-        font-size: 2.5vmax
-        background-color: rgba(0, 0, 0, 0.8)
-        padding: 1.3% 3%
-        border-radius: 5px
-        color: hsla(291, 84%, 76%, 1)
-        text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px
-        animation: text-flicker-out-glow 1s linear 0s 1 normal none
+                    &_title
+                        font-family: $font-title
+                        font-size: 2.5vmax
+                        background-color: rgba(0, 0, 0, 0.8)
+                        padding: 1.3% 3%
+                        border-radius: 5px
+                        color: hsla(291, 84%, 76%, 1)
+                        text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px
+                        animation: text-flicker-out-glow 1s linear 0s 1 normal none
 
-    &__container_box_content_chapter_text
-        width: 60vw
-        height: 50vh
-        text-align: justify
-        background-color: rgba(0, 0, 0, 0.8)
-        color: white
-        padding: 5%
-        overflow-y: scroll
-        scrollbar-width: none
-        line-height: 150%
-        font-size: 1.1em
-        border-radius: 10px
-        font-family: $font-paragraph
+                    &_text
+                        width: 60vw
+                        height: 50vh
+                        text-align: justify
+                        background-color: rgba(0, 0, 0, 0.8)
+                        color: white
+                        padding: 5%
+                        overflow-y: scroll
+                        scrollbar-width: none
+                        line-height: 150%
+                        font-size: 1.1em
+                        border-radius: 10px
+                        font-family: $font-paragraph
 
-    &__container_box_content_chapter_text::-webkit-scrollbar
-        display: none
+                        &::-webkit-scrollbar
+                            display: none
 
 .chapter-nav
     position: absolute
