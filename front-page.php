@@ -1,26 +1,26 @@
 <?php get_header() ?>
 
-<header style="background: center / cover no-repeat url('<?php echo esc_url(get_field('home__header_bgimg')); ?>'); height: 600px;">
+<header class="header" style="background: center / cover no-repeat url('<?php echo esc_url(get_field('home__header_bgimg')); ?>'); height: 600px;">
 
-    <h1><?php echo wp_kses_post(get_field('home__header_title')); ?></h1>
-    <p><?php echo wp_kses_post(get_field('home__header_subtitle')); ?></p>
+    <h1 class="header__title"><?php echo wp_kses_post(get_field('home__header_title')); ?></h1>
+    <p class="header__subtitle"><?php echo wp_kses_post(get_field('home__header_subtitle')); ?></p>
 
 </header>
 
 <body>
-    <section class="bg_menu_galery">
-        <div id="cafe_menu_galery">
-            <div class="cafe_bg">
-                <div class="cafe_bg_img"><img src="<?php echo esc_url(get_field('cafe__menu_image')); ?>" alt=""></div>
+    <section id="cafe">
+        <div id="cafe__menu">
+            <div class="cafe__menu_bg">
+                <div class="cafe__menu_bg_imgBox"><img src="<?php echo esc_url(get_field('cafe__menu_image')); ?>" alt=""></div>
             </div>
-            <div class="cafe_menu">
-                <h2><?php echo wp_kses_post(get_field('cafe__menu_title')); ?></h2>
+            <div class="cafe__menu">
+                <h2 class="cafe__menu_title"><?php echo wp_kses_post(get_field('cafe__menu_title')); ?></h2>
                 <a href="<?php echo esc_url(home_url('/book/')); ?>">or discover them all here</a>
             </div>
         </div>
     </section>
-    <section class="book_container_bg">
-        <div class="book_container">
+    <section id="book_container">
+        <div class="book">
 
             <?php
             $args = array(
@@ -34,9 +34,9 @@
 
             <?php if ($the_query->have_posts()) : ?>
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <a href="<?php echo esc_url(get_permalink()); ?>" class="post_box" target="_blank">
+                    <a href="<?php echo esc_url(get_permalink()); ?>" class="book__post_box" target="_blank">
                         <img src="<?php echo esc_url(get_field('book__image_id')); ?>" alt="img cyber cat book">
-                        <h3><?php echo wp_kses_post(get_the_title()); ?></h3>
+                        <h3 class="book__post_box_title"><?php echo wp_kses_post(get_the_title()); ?></h3>
                         <p><?php echo wp_kses_post(get_field('book_synopsis')); ?></p>
                     </a>
 
@@ -47,25 +47,25 @@
             <?php wp_reset_postdata(); ?>
 
         </div>
-        <h2 class="gap_placement"><?php echo wp_kses_post(get_field('title_for_gap')) ?></h2>
+        <h2 class="book__gap_placement--frontPage"><?php echo wp_kses_post(get_field('title_for_gap')) ?></h2>
     </section>
-    <section class="coffee_bg">
+    <section id="coffee_bg">
         <div class="coffee">
-            <div class="coffee-container">
+            <div class="coffee__container">
                 <img src="<?php echo esc_url(get_field('coffee_bgimg')); ?>" alt="cyber café coffee image">
-                <div class="coffee-image-text"><?php echo wp_kses_post(get_field('image_placeholder_text')); ?></div>
+                <div class="coffee__container_image_text"><?php echo wp_kses_post(get_field('image_placeholder_text')); ?></div>
             </div>
-            <h3 class="coffee_title"><?php echo wp_kses_post(get_field('coffee_title')); ?></h3>
-            <p class="coffee_subtitle"><?php echo wp_kses_post(get_field('coffee_subtitle')); ?></p>
+            <h3 class="coffee__title"><?php echo wp_kses_post(get_field('coffee_title')); ?></h3>
+            <p class="coffee__subtitle"><?php echo wp_kses_post(get_field('coffee_subtitle')); ?></p>
         </div>
 
-        <div class="coffee_items">
+        <div class="coffee__items">
             <?php if (have_rows('coffee__list')) : ?>
                 <?php while (have_rows('coffee__list')) : the_row(); ?>
-                    <div class="coffee-list">
+                    <div class="coffee__items_list">
                         <a href="<?php echo esc_url(get_sub_field('link_post')); ?>" target="_blank">
                             <img src="<?php echo esc_url(get_sub_field('coffee__list_img')); ?>" alt="">
-                            <h3 class="coffee-list-title"><?php echo wp_kses_post(get_sub_field('coffee__list_title')); ?></h3>
+                            <h3 class="coffee__items_list_title"><?php echo wp_kses_post(get_sub_field('coffee__list_title')); ?></h3>
                         </a>
                     </div>
                 <?php endwhile; ?>

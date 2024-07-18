@@ -1,0 +1,355 @@
+
+.book-body
+    background-image: linear-gradient(to right, #030560, #000953, #000a45, #030737, #050429, #050429, #050429, #050429, #030737, #000a45, #000953, #030560)
+
+    &__header
+        display: flex
+        flex-direction: column
+        align-items: center
+        flex-wrap: wrap
+        padding: 5% 10%
+        gap: 15px
+
+    &__header_box
+        display: flex
+        flex-direction: row
+        justify-content: center
+
+    &__header_box img
+        width: 100px
+        height: 100px
+        transform: scale(90%)
+
+    &__header_box_title
+        display: flex
+        align-items: center
+        margin-left: 3%
+        @include titleColor
+
+    &__header_recipe
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &__header_recipe img
+        width: 6vmax
+        height: 6vmax
+
+    &__header > &__header_recipe_button
+        width: 20vmax
+
+    &__header_recipe_button_link
+        text-decoration: none
+        text-align: center
+        filter: opacity(80%)
+        display: inline-block
+        cursor: pointer
+        color: #ffffff
+        text-transform: uppercase
+        font-family: $font-title
+        font-size: 9px
+        padding: 6px 40px
+        text-decoration: none
+        border-radius: 5px
+
+    &__header_recipe_button_link:hover
+        filter: opacity(100%)
+        background: linear-gradient(to right, #ff5eff 5%, #4343f0 100%)
+
+    &__header_recipe_button_link:active
+        position: relative
+        top: 1px
+        box-shadow: inset 0px 1px 8px -5px #dcecfb
+        color: rgba(0, 0, 0, 1)
+
+    &__header_recipe_button_line
+        position: absolute
+
+    &__header_recipe_button_line:nth-child(1)
+        top: 0
+        left: 0
+        width: 100%
+        height: 2px
+        background: linear-gradient(to right, #ff5eff00 5%, #ff5eff6e 45%, #ff5eff 60%, #4343f0 100%)
+        animation: animateNeonLine 1s linear infinite
+
+.book-synopsis
+    position: relative
+    left: 25%
+    padding: 3%
+    width: 50vw
+    font-family: $font-paragraph
+    font-size: 15px
+    color: white
+    text-align: justify
+    border-radius: 10px
+    background-image: linear-gradient(to right bottom, #8e00cd, #7d22d1, #6b31d4, #573bd6, #3f43d7, #3f43d7, #3f43d7, #3f43d7, #573bd6, #6b31d4, #7d22d1, #8e00cd)
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset
+
+    &__title
+        color: white
+        font-size: 2vmax
+        margin-left: 30%
+        font-family: $font-paragraph
+        animation: text-focus-in 1s linear 0s 1 normal none
+
+.book-extrait
+    position: relative
+    margin-top: 3%
+    height: 100vh
+    overflow: hidden
+
+    & button
+        font-family: $font-paragraph
+        border-radius: 5px
+
+    &__container
+        width: 100%
+        height: 100%
+
+    &__container_box
+        width: 100vw
+        height: 100vh
+        display: none
+        justify-content: center
+        align-items: center
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        position: absolute
+        top: 0
+        left: 0
+
+    &__container_box_content
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 2% 5%
+        box-sizing: border-box
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.5)
+
+    &__container_box_content_chapter_number
+        padding: 1%
+        margin-bottom: 5%
+        font-family: $font-title
+        color: hsla(291, 84%, 76%, 1)
+        border: 1px solid hsla(291, 84%, 76%, 1)
+        background-color: rgba(0, 0, 0, 0.8)
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px
+
+    &__container_box_content_chapter_date
+        margin-top: 2%
+        margin-bottom: 3%
+        background-color: rgba(0, 0, 0, 0.8)
+        padding: 5px
+        border-radius: 5px
+        font-family: $font-paragraph
+        color: white
+        font-size: 1.5vmax
+
+    &__container_box_content_chapter_title
+        font-family: $font-title
+        font-size: 2.5vmax
+        background-color: rgba(0, 0, 0, 0.8)
+        padding: 1.3% 3%
+        border-radius: 5px
+        color: hsla(291, 84%, 76%, 1)
+        text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px
+        animation: text-flicker-out-glow 1s linear 0s 1 normal none
+
+    &__container_box_content_chapter_text
+        width: 60vw
+        height: 50vh
+        text-align: justify
+        background-color: rgba(0, 0, 0, 0.8)
+        color: white
+        padding: 5%
+        overflow-y: scroll
+        scrollbar-width: none
+        line-height: 150%
+        font-size: 1.1em
+        border-radius: 10px
+        font-family: $font-paragraph
+
+    &__container_box_content_chapter_text::-webkit-scrollbar
+        display: none
+
+.chapter-nav
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    background: none
+    color: white
+    border: none
+    font-size: 1em
+    padding: 10px 20px
+    cursor: pointer
+    z-index: 10
+    opacity: 60%
+
+    &:hover
+        opacity: 100%
+        background: rgba(0, 0, 0, 0.5)
+
+#prevChapter
+    left: 12%
+
+    &:hover
+        animation: blink1_backwards 0.5s ease-in-out 0s 1 normal backwards
+
+#nextChapter
+    right: 13%
+
+    &:hover
+        animation: blink1_backwards 0.5s ease-in-out 0s 1 normal backwards
+
+@keyframes text-focus-in
+
+    0%
+        filter: blur(12px)
+        opacity: 0
+
+    100%
+        filter: blur(0)
+        opacity: 1
+
+@keyframes animateNeonLine
+    0%
+        left: -100%
+
+    100%
+        left: 100%
+
+@keyframes text-flicker-out-glow
+
+    0%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.6),0 0 60px rgba(0,0,0,.45),0 0 110px rgba(0,0,0,.25),0 0 100px rgba(0,0,0,.1)
+
+    13%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.6),0 0 60px rgba(0,0,0,.45),0 0 110px rgba(0,0,0,.25),0 0 100px rgba(0,0,0,.1)
+
+    14%
+        opacity: 0
+        text-shadow: none
+
+    15%
+        opacity: 0
+        text-shadow: none
+
+    16%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.4),0 0 110px rgba(0,0,0,.2),0 0 100px rgba(0,0,0,.1)
+
+    22%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.4),0 0 110px rgba(0,0,0,.2),0 0 100px rgba(0,0,0,.1)
+
+    23%
+        opacity: 0
+        text-shadow: none
+
+    24%
+        opacity: 0
+        text-shadow: none
+
+    25%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.35),0 0 100px rgba(0,0,0,.1)
+
+    34%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.35),0 0 100px rgba(0,0,0,.1)
+
+    35%
+        opacity: 0
+        text-shadow: none
+
+    39%
+        opacity: 0
+        text-shadow: none
+
+    40%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.35)
+
+    42%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.35)
+
+    43%
+        opacity: 0
+        text-shadow: none
+
+    44%
+        opacity: 0
+        text-shadow: none
+
+    45%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.45),0 0 60px rgba(0,0,0,.25)
+
+    50%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.45),0 0 60px rgba(0,0,0,.25)
+
+    54%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.45),0 0 60px rgba(0,0,0,.25)
+
+    55%
+        opacity: 0
+        text-shadow: none
+
+    69%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.45),0 0 60px rgba(0,0,0,.25)
+
+    70%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.45),0 0 60px rgba(0,0,0,.25)
+
+    71%
+        opacity: 0
+        text-shadow: none
+
+    78%
+        opacity: 0
+        text-shadow: none
+
+    79%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.25)
+
+    80%
+        opacity: 0
+        text-shadow: none
+
+    88%
+        opacity: 0
+        text-shadow: none
+
+    89%
+        opacity: 1
+        text-shadow: none
+
+    90%
+        opacity: 0
+        text-shadow: none
+
+    100%
+        opacity: 0
+
+@keyframes blink1_backwards
+    0%,
+    50%,
+    100%
+        opacity: 1
+
+    25%,
+    75%
+        opacity: 0

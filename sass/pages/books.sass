@@ -1,0 +1,97 @@
+
+#book_container
+    background-image: linear-gradient(to top, #151429, #27204b, #412a6d, #62318e, #8934ad)
+
+.book
+    display: flex
+    justify-content: space-evenly
+    align-items: flex-start
+    flex-wrap: wrap
+    padding: 5%
+
+    &__post_box
+        text-decoration: none
+        max-height: 70vh
+        width: 25vmax
+        font-family: $font-paragraph
+        font-size: 1em
+        color: #E9C4E3
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 2%
+        margin-bottom: 5%
+        border-radius: 5%
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(209, 213, 219, 0.8) 0px 0px 0px 1px inset
+        background-image: linear-gradient(to right bottom, #0002d8, #7900cf, #aa00c5, #ce00bc, #eb12b4)
+
+    &__post_box:hover
+        animation: vibrate2 0.5s ease 0s 1 normal none
+
+    &__post_box_title
+        text-wrap: wrap
+        padding-bottom: 5%
+        margin-top: 5%
+        font-family: $font-title
+        font-size: 2vmax
+        @include titleShadow
+
+    &__post_box p
+        max-width: 20vmax
+        font-size: 14px
+        text-align: justify
+        padding-top: 5%
+        overflow-y: scroll
+        font-family: $font-paragraph
+    ::-webkit-scrollbar
+        width: 0
+
+    &__post_box img
+        width: 10vmax
+        height: 10vmax
+        border-radius: 5px
+        margin-top: 10%
+
+    &__gap_placement--bookPage
+        text-align: center
+        font-family: $font-title
+        color: white
+        font-size: 1vmax
+        padding-bottom: 5%
+
+    &__gap_placement--frontPage
+        @include titleShadow
+        font-family: $font-title
+        font-size: 3vmax
+        text-align: center
+        padding: 0 10% 10% 10%
+        animation: blink1 1.5s ease-in-out 0s infinite normal none
+
+@keyframes vibrate2
+    0%
+        transform: translate(0)
+
+    20%
+        transform: translate(2px, -2px)
+
+    40%
+        transform: translate(2px, 2px)
+
+    60%
+        transform: translate(-2px, 2px)
+
+    80%
+        transform: translate(-2px, -2px)
+
+    100%
+        transform: translate(0)
+
+@keyframes blink1
+    0%,
+    50%,
+    100%
+        opacity: 1
+
+    25%,
+    75%
+        opacity: 0

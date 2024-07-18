@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const container = document.querySelector('.book_container');
-    const chapters = document.querySelectorAll('.book_box');
+    const container = document.querySelector('.book-extrait__container');
+    const chapters = document.querySelectorAll('.book-extrait__container_box');
     const prevBtn = document.getElementById('prevChapter');
     const nextBtn = document.getElementById('nextChapter');
     let currentChapter = 1;
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         chapters.forEach(chapter => {
             chapter.style.display = 'none';
         });
-        const activeChapter = document.querySelector(`.book_box[data-chapter="${currentChapter}"]`);
+        const activeChapter = document.querySelector(`.book-extrait__container_box[data-chapter="${currentChapter}"]`);
         if (activeChapter) {
             activeChapter.style.display = 'flex';
         }

@@ -1,0 +1,18 @@
+/* Error: expected newline.
+ *     ,
+ * 253 |         text-shadow: #ffffff80 0px 0px 5px, #ffffff4f 0px 0px 10px, #ffffff4f 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75pxtext-shadow: #ffffff80 0px 0px 5px, #ffffff4f 0px 0px 10px, #ffffff4f 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px
+ *     |                                                                                                                                                                                                                    ^
+ *     '
+ *   sass\pages\front.sass 253:212  @import
+ *   sass\styles.sass 9:9           root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: expected newline.\a     \2577 \a 253 \2502          text-shadow: #ffffff80 0px 0px 5px, #ffffff4f 0px 0px 10px, #ffffff4f 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75pxtext-shadow: #ffffff80 0px 0px 5px, #ffffff4f 0px 0px 10px, #ffffff4f 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px\d\a     \2502                                                                                                                                                                                                                     ^\a     \2575 \a   sass\\pages\\front.sass 253:212  @import\a   sass\\styles.sass 9:9           root stylesheet";
+}

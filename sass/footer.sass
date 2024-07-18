@@ -1,0 +1,60 @@
+#footer
+    color: white
+    height: 30vh
+    text-align: center
+    font-family: $font-paragraph
+    padding-top: 5%
+    background-image: linear-gradient(to bottom, #16152b, #190f1f, #170915, #0f040a, #000000)
+
+.social-networks
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    gap: 15%
+    margin: 5%
+
+    &__icon
+        display: inline-block
+
+    &__icon img
+        width: 50px
+        height: 50px
+
+    &__icon:hover
+        filter: saturate(500%)
+        animation: myAnim 0.3s ease 0s 1 normal forwards
+
+@keyframes myAnim
+    0%,
+    50%,
+    100%
+        opacity: 1
+
+    25%,
+    75%
+        opacity: 0
+
+#date
+    font-size: 1vmax
+    color: #6f6bb69f
+
+    &__title
+        font-family: $font-title
+        font-size: 0.8vmax
+
+#legal-notices
+    padding-top: 5vh
+    font-size: 0.8vmax
+    font-family: $font-paragraph
+    color: #6f6bb69f
+
+    & h3
+        padding-bottom: 1%
+        font-family: $font-title
+
+.auteur
+    padding: 5% 0
+    font-size: 0.8vmax
+    font-family: $font-title
+    color: #6f6bb69f

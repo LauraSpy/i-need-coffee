@@ -1,0 +1,141 @@
+
+#cafe
+    background-image: linear-gradient(to bottom, #151429, #27204b, #412a6d, #62318e, #8934ad)
+
+#cafe__menu
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    padding-top: 5%
+    gap: 5%
+
+.cafe
+    &__menu
+        display: flex
+        flex-direction: column
+        text-align: center
+
+        & a
+            text-decoration: none
+            font-size: 1em
+            color: white
+            font-family: $font-title
+            transition: all ease-in-out 0.5s
+
+        & a:hover
+            transition: ease-in-out 0.5s
+            text-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px
+
+        &_bg
+            display: flex
+            align-items: center
+            justify-content: center
+            transform: scale(0.9)
+
+            &_imgBox img
+                width: 15vmax
+                height: 15vmax
+                object-fit: cover
+                object-position: bottom center
+                border: 4px inset #0002d8
+                animation: pulseReg 1.5s ease-in-out 0s infinite normal none
+
+        &_title
+            @include titleColor
+            @include flickerAnimation
+
+#coffee_bg
+    height: 150vh
+    background-image: linear-gradient(to bottom, #151429, #24264a, #31396e, #3c4e95, #4364be, #4364be, #4364be, #4364be, #3c4e95, #31396e, #24264a, #151429)
+
+.coffee
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    position: relative
+
+    &__container
+        & img
+            width: 60vw
+            height: auto
+            border-radius: 5px
+            border: 5px solid black
+            filter: brightness(5%)
+            transition: all ease-in-out 1.5s
+
+        & img:hover
+            transition: ease-in-out 0.5s
+            filter: brightness(150%)
+            box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset
+
+        & img:hover + &_image_text
+            opacity: 0
+
+        &_image_text
+            position: absolute
+            margin-top: -17%
+            left: 50%
+            transform: translate(-50%, -50%)
+            color: white
+            font-size: 1vmax
+            text-align: center
+            padding: 10px
+            font-family: $font-title
+            text-transform: uppercase
+            transition: opacity 0.5s ease-in-out
+
+    &__title
+        margin-top: 2vw
+        @include titleColor
+        @include flickerAnimation
+
+    &__subtitle
+        font-size: 1em
+        color: white
+        font-family: $font-title
+        text-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px
+
+    &__items
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-evenly
+        margin: 2.5%
+
+        &_list
+            margin: 2%
+
+            & img
+                height: 5vmax
+                width: 5vmax
+                border-radius: 50%
+                margin-bottom: 10%
+
+            & a
+                text-decoration: none
+                color: hsla(291, 84%, 76%, 1)
+                display: flex
+                flex-direction: column
+                align-items: center
+                @include flickerAnimation
+
+                &:hover
+                    text-shadow: #ffffff80 0px 0px 5px, #ffffff4f 0px 0px 10px, #ffffff4f 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px
+
+            &_title
+                margin-top: 5%
+                margin-bottom: 10%
+                font-size: 1em
+                font-family: $font-title
+
+@keyframes pulseReg
+    0%
+        transform: scale(1)
+
+    50%
+        transform: scale(1.1)
+
+    100%
+        transform: scale(1)

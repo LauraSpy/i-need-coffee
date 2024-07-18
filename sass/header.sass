@@ -1,0 +1,264 @@
+.main-nav
+    top: 8%
+    right: 5%
+    padding-top: 0.3%
+    position: absolute
+    z-index: 5
+    background-color: rgba(0, 0, 0, 0.2)
+    border-right: 1px solid rgba(255, 255, 255, 0.5)
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+    border-radius: 5px
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px
+
+    &:hover
+        animation: shakeMe 1s ease 0s 1 normal forwards
+
+    @keyframes shakeMe
+        0%
+            transform: translate(0)
+
+        10%
+            transform: translate(-2px, -2px)
+
+        20%
+            transform: translate(2px, -2px)
+
+        30%
+            transform: translate(-2px, 2px)
+
+        40%
+            transform: translate(2px, 2px)
+
+        50%
+            transform: translate(-2px, -2px)
+
+        60%
+            transform: translate(2px, -2px)
+
+        70%
+            transform: translate(-2px, 2px)
+
+        80%
+            transform: translate(-2px, -2px)
+
+        90%
+            transform: translate(2px, -2px)
+
+        100%
+            transform: translate(0)
+
+.menu-toggle
+    color: white
+    width: 30px
+    height: 30px
+    cursor: pointer
+
+.nav-menu
+    display: none
+    position: absolute
+    right: 5%
+    top: 150%
+    border-radius: 5px
+    background-color: rgba(0, 0, 0, 0)
+    font-family: $font-paragraph
+    font-size: 1.5vmax
+    width: 10vw
+    text-align: end
+
+    & a
+        text-decoration: none
+        color: hsla(291, 84%, 76%, 1)
+
+    & ul
+        list-style-type: none
+
+    & a:hover
+        text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px
+        animation: text-flicker-out-glow 1s linear 0s 1 normal none
+
+#toggle-music
+    position: absolute
+    top: 8%
+    left: 5%
+    z-index: 5
+    cursor: pointer
+
+    &:hover
+        animation: pulse 0.6s ease-in-out 0s 1 normal forwards
+
+    & img
+        width: 40px
+        height: 40px
+
+button#toggle-music
+    background-color: rgba(0, 0, 0, 0)
+    border: none
+
+.header
+    font-family: $font-title
+    font-style: normal
+    font-size: 3vmax
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+
+    &__title, &__subtitle
+        @include titleShadow
+
+    &__title
+        animation: text-shadow-multicolor 2s ease 0s infinite normal none
+
+    @keyframes text-shadow-multicolor
+
+        0%
+            text-shadow: 0 0px 15px #f0f
+
+        33%
+            text-shadow: 0 0px 15px #0ff
+
+        66%
+            text-shadow: 0 0px 10px #0f0
+
+        100%
+            text-shadow: 0 0px 10px #ff0
+
+@media screen and (max-width: 800px)
+    .header__title, .header__subtitle
+        padding-left: 10%
+
+    .nav-menu
+        font-size: 2vmax
+        width: auto
+
+@keyframes text-flicker-out-glow
+
+    0%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.6),0 0 60px rgba(0,0,0,.45),0 0 110px rgba(0,0,0,.25),0 0 100px rgba(0,0,0,.1)
+
+    13%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.6),0 0 60px rgba(0,0,0,.45),0 0 110px rgba(0,0,0,.25),0 0 100px rgba(0,0,0,.1)
+
+    14%
+        opacity: 0
+        text-shadow: none
+
+    15%
+        opacity: 0
+        text-shadow: none
+
+    16%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.4),0 0 110px rgba(0,0,0,.2),0 0 100px rgba(0,0,0,.1)
+
+    22%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.4),0 0 110px rgba(0,0,0,.2),0 0 100px rgba(0,0,0,.1)
+
+    23%
+        opacity: 0
+        text-shadow: none
+
+    24%
+        opacity: 0
+        text-shadow: none
+
+    25%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.35),0 0 100px rgba(0,0,0,.1)
+
+    34%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.35),0 0 100px rgba(0,0,0,.1)
+
+    35%
+        opacity: 0
+        text-shadow: none
+
+    39%
+        opacity: 0
+        text-shadow: none
+
+    40%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.35)
+
+    42%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.55),0 0 60px rgba(0,0,0,.35)
+
+    43%
+        opacity: 0
+        text-shadow: none
+
+    44%
+        opacity: 0
+        text-shadow: none
+
+    45%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.45),0 0 60px rgba(0,0,0,.25)
+
+    50%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.45),0 0 60px rgba(0,0,0,.25)
+
+    54%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.45),0 0 60px rgba(0,0,0,.25)
+
+    55%
+        opacity: 0
+        text-shadow: none
+
+    69%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.45),0 0 60px rgba(0,0,0,.25)
+
+    70%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.45),0 0 60px rgba(0,0,0,.25)
+
+    71%
+        opacity: 0
+        text-shadow: none
+
+    78%
+        opacity: 0
+        text-shadow: none
+
+    79%
+        opacity: 1
+        text-shadow: 0 0 30px rgba(0,0,0,.25)
+
+    80%
+        opacity: 0
+        text-shadow: none
+
+    88%
+        opacity: 0
+        text-shadow: none
+
+    89%
+        opacity: 1
+        text-shadow: none
+
+    90%
+        opacity: 0
+        text-shadow: none
+
+    100%
+        opacity: 0
+
+@keyframes pulse
+    0%
+        transform: scale(1)
+
+    50%
+        transform: scale(1.1)
+
+    100%
+        transform: scale(1)

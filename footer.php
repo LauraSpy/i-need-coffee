@@ -1,12 +1,12 @@
 <?php wp_footer(); ?>
 
-<footer id="site-footer">
+<footer id="footer">
     <button id="back-to-top" title="Retour en haut" style="display: none;">
         Back to top
     </button>
 
-    <div class="container">
-        <section class="social_networks_container">
+    <div class="social">
+        <section class="social-networks">
             <?php
             $menu_name = 'social-networks';
             $locations = get_nav_menu_locations();
@@ -18,7 +18,7 @@
             <?php if (have_rows('social_media_links', $navID)) : ?>
                 <?php while (have_rows('social_media_links', $navID)) : the_row(); ?>
                     <a href="<?php the_sub_field('lien_icon'); ?>">
-                        <div class="social-icon">
+                        <div class="social-networks__icon">
                             <img src="<?php the_sub_field('icon_img'); ?>" alt="icon social networks">
                         </div>
                     </a>
@@ -30,19 +30,19 @@
     </div>
 
     <div id="date">
-        <h3>Date of creation : </h3>
+        <h3 class="date__title">Date of creation : </h3>
         <p><?php echo esc_html(get_the_date()); ?></p>
     </div>
 
-    <div id="mentions_légales">
+    <div id="legal-notices">
         <h3>Legal Notices</h3>
         <p><strong>Button Play/Pause :</strong> Graphix's Art</p>
         <p><strong>Music :</strong> Phantasm by Purely Grey | https://soundcloud.com/purelygrey</p>
         <p></p>
     </div>
 
-    <div id="auteur">
-        <h2>© Template created by <?php echo esc_html('Laura Spy'); ?></h2>
+    <div>
+        <h2 class="auteur">© Template created by <?php echo esc_html('Laura Spy'); ?></h2>
     </div>
 </footer>
 
