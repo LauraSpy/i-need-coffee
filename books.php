@@ -18,7 +18,7 @@ Template Name: List of Books
         <?php
         $args = array(
             'post_type' => 'book',
-            'posts_per_page' => 4,
+            'posts_per_page' => 50,
             'order' => 'DESC',
         );
         ?>

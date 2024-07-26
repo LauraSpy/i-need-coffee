@@ -445,9 +445,9 @@ add_action('acf/include_fields', function () {
         'location' => array(
             array(
                 array(
-                    'param' => 'page_type',
+                    'param' => 'page_template',
                     'operator' => '==',
-                    'value' => 'front_page',
+                    'value' => 'default',
                 ),
             ),
         ),
@@ -1033,6 +1033,8 @@ add_action('acf/init', function () {
     ));
 });
 
+
+
 //EXPORT TAXONOMY
 
 function cptui_register_my_cpts()
@@ -1081,52 +1083,6 @@ function cptui_register_my_cpts()
 add_action('init', 'cptui_register_my_cpts');
 
 
-function cptui_register_my_cpts_book()
-{
-
-    /**
-     * Post Type: books.
-     */
-
-    $labels = [
-        "name" => esc_html__("books", "custom-post-type-ui"),
-        "singular_name" => esc_html__("book", "custom-post-type-ui"),
-        "menu_name" => esc_html__("my book", "custom-post-type-ui"),
-    ];
-
-    $args = [
-        "label" => esc_html__("books", "custom-post-type-ui"),
-        "labels" => $labels,
-        "description" => "",
-        "public" => true,
-        "publicly_queryable" => true,
-        "show_ui" => true,
-        "show_in_rest" => true,
-        "rest_base" => "",
-        "rest_controller_class" => "WP_REST_Posts_Controller",
-        "rest_namespace" => "wp/v2",
-        "has_archive" => false,
-        "show_in_menu" => true,
-        "show_in_nav_menus" => true,
-        "delete_with_user" => false,
-        "exclude_from_search" => false,
-        "capability_type" => "post",
-        "map_meta_cap" => true,
-        "hierarchical" => false,
-        "can_export" => false,
-        "rewrite" => ["slug" => "book", "with_front" => true],
-        "query_var" => true,
-        "menu_icon" => "dashicons-book",
-        "supports" => ["title", "thumbnail", "author", "page-attributes"],
-        "show_in_graphql" => false,
-    ];
-
-    register_post_type("book", $args);
-}
-
-add_action('init', 'cptui_register_my_cpts_book');
-
-
 function cptui_register_my_taxes()
 {
 
@@ -1164,41 +1120,3 @@ function cptui_register_my_taxes()
     register_taxonomy("coffee", ["book"], $args);
 }
 add_action('init', 'cptui_register_my_taxes');
-
-function cptui_register_my_taxes_coffee()
-{
-
-    /**
-     * Taxonomy: coffee.
-     */
-
-    $labels = [
-        "name" => esc_html__("coffee", "custom-post-type-ui"),
-        "singular_name" => esc_html__("coffee", "custom-post-type-ui"),
-    ];
-
-
-    $args = [
-        "label" => esc_html__("coffee", "custom-post-type-ui"),
-        "labels" => $labels,
-        "public" => true,
-        "publicly_queryable" => true,
-        "hierarchical" => false,
-        "show_ui" => true,
-        "show_in_menu" => true,
-        "show_in_nav_menus" => true,
-        "query_var" => true,
-        "rewrite" => ['slug' => 'coffee', 'with_front' => true,],
-        "show_admin_column" => false,
-        "show_in_rest" => true,
-        "show_tagcloud" => false,
-        "rest_base" => "coffee",
-        "rest_controller_class" => "WP_REST_Terms_Controller",
-        "rest_namespace" => "wp/v2",
-        "show_in_quick_edit" => false,
-        "sort" => false,
-        "show_in_graphql" => false,
-    ];
-    register_taxonomy("coffee", ["book"], $args);
-}
-add_action('init', 'cptui_register_my_taxes_coffee');
